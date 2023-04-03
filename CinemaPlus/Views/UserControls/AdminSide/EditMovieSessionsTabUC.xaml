@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.EditMovieSessionsTabUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             d:DesignHeight="471" 
+             d:DesignWidth="974"
+             Height="471"
+             Width="974">
+
+    <Grid Background="{DynamicResource firstColor}" x:Name="SessionsGrid" Height="571" VerticalAlignment="Top">
+        <Border 
+                Margin="0,0,0,65">
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Width="980"
+                          Name ="EditMovieSessionsTabUCScroll"
+                          HorizontalAlignment="Center" Margin="0,2">
+                <WrapPanel Name="MovieSchedulesToEditWrapPanel"
+                               Width="974">
+
+                </WrapPanel>
+            </ScrollViewer>
+        </Border>
+            <Canvas>
+        <Button Style="{StaticResource MyButtonStyle2}"
+                Width="120"
+                Canvas.Left="847"
+                Canvas.Bottom="110"
+                VerticalAlignment="Top"
+                Height="50"
+                Background="Black"
+                x:Name="AddSessionButton"
+                HorizontalAlignment="Stretch"
+                Command="{Binding AddSessionCommand}">
+                <TextBlock Canvas.Left="-56" Canvas.Top="-15" HorizontalAlignment="Left" VerticalAlignment="Center">Add Session</TextBlock>
+        </Button>
+            </Canvas>
+    </Grid>
+</UserControl>

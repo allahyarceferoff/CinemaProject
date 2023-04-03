@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.MovieSessionUC" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="140"
+             Height="140"
+             Width="887">
+    <Border BorderBrush="{StaticResource fifthColor}"
+            BorderThickness="0,0,0,1">
+
+        <Grid Background="{DynamicResource firstColor}" Margin="0,0,10,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Column="0">
+                <Line X1="0" Y1="140"
+                      X2="-100" Y2="140"
+                      Stroke="{StaticResource fifthColor}"
+                      StrokeThickness="1">
+                </Line>
+            </Grid>
+
+            <Grid Grid.Column="1"/>
+
+            <Grid Grid.Column="00">
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Date"
+                       VerticalAlignment="Top"
+                       FontSize="19"
+                       TextAlignment="Center" Height="70" Margin="0,10,0,0" Width="195">
+
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Margin="0,47,0,0" 
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Top"
+                       Foreground="{StaticResource tenthColor}"
+                       FontSize="22"
+                       TextAlignment="Center" 
+                       Height="92"
+                       Text="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Width="196">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Time"
+                       VerticalAlignment="Top"
+                       FontSize="19"
+                       TextAlignment="Center" Height="70" Margin="0,10,0,0" Width="195">
+
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Margin="0,47,0,0" 
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Top"
+                       Foreground="{StaticResource tenthColor}"
+                       FontSize="22"
+                       TextAlignment="Center" 
+                       Height="92"
+                       Text="{Binding Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Width="196">
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Foreground="{StaticResource tenthColor}"
+                       Text="Price"
+                       VerticalAlignment="Top"
+                       FontSize="19"
+                       TextAlignment="Center" Height="70" Margin="0,10,0,0" Width="195">
+
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource MyTextBlockStyle2}"
+                       HorizontalAlignment="Center"
+                       Margin="0,47,0,0" 
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Top"
+                       FontSize="22"
+                       Foreground="{StaticResource tenthColor}"
+                       TextAlignment="Center" 
+                       Height="92"
+                       Text="{Binding Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                       Width="196">
+                </TextBlock>
+            </Grid>
+
+
+        </Grid>
+    </Border>
+</UserControl>

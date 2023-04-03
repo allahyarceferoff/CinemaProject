@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="CinemaPlus.Views.UserControls.AdminSide.AdminHomePageUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaPlus.Views.UserControls.AdminSide"
+             mc:Ignorable="d" 
+             Height="950"
+             Width="1500"
+             d:DesignWidth="1500"
+             Background="{DynamicResource firstColor}"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Center">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"
+                        Margin="0,50,0,0">
+                <RadioButton Height="80" Command="{Binding EditMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="404" IsChecked="True" Content="EDIT MOVIE"/>
+                <RadioButton Height="79" Command="{Binding AddMovieCommand}" Style="{StaticResource MyRadioButtonStyle}" Width="400" DockPanel.Dock="Top" Content="ADD MOVIE"/>
+                <Button Style="{StaticResource MyButtonStyle9}" Command="{Binding ViewPurchasedTicketsCommand}" Width="275" Content="View Purchased Tickets" Canvas.Left="160" Height="81"/>
+            </StackPanel>
+
+            <StackPanel Name="AdminPage"
+                    Orientation="Vertical"
+                    Height="Auto">
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
